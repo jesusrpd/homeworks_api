@@ -22,4 +22,7 @@ app.get('/', (req, res)=>{
     });
 });
 
+//Routes from the api
+app.use('/api/user');
+
 export default app;

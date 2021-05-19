@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import config from './config';
 
 //Database conection
-mongoose.connect(config.uri,{
+mongoose.connect(config.URI,{
     useUnifiedTopology: true,
     useNewUrlParser: true
 })
