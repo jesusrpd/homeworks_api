@@ -1,10 +1,10 @@
 import {Router} from 'express';
 import * as controllers from '../controllers/user.controller';
-import userExist from '../middlewares/userExist';
+import middlewares from '../middlewares';
 const route = Router();
 
 //Routes for user creation and login
-route.post('/signup', userExist, controllers.signup);
+route.post('/signup', middlewares.userExist, controllers.signup);
 
 route.post('/login', controllers.login);
 
