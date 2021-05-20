@@ -2,6 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import pkg from '../package.json';
+import userRoutes from './routes/user.routes';
+import homeworksRoutes from './routes/homeworks.routes';
 const app = express();
 
 //Middlewares from configuration
@@ -23,6 +25,7 @@ app.get('/', (req, res)=>{
 });
 
 //Routes from the api
-app.use('/api/user');
+app.use('/api/user', userRoutes);
+app.use('/api/homeworks', homeworksRoutes);
 
 export default app;
