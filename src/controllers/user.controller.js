@@ -32,3 +32,12 @@ export const login = async (req, res)=>{
     const token = jwt.sign({id: user._id}, config.SECRET,sesion);
     res.status(200).json({token, auth: true, username: user.username});
 };
+
+//Change username
+export const usernameChange = async (req, res)=>{
+    const {username} = req.body;
+
+    const userNew = await User.findOneAndUpdate(req.id, {username});
+    userNew.save();
+    res.status(200).json(userNew);
+};

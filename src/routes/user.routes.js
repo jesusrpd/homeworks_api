@@ -8,4 +8,6 @@ route.post('/signup', middlewares.userExist, controllers.signup);
 
 route.post('/login', controllers.login);
 
+route.post('/username', middlewares.verifyToken, controllers.usernameChange);
+
 export default route;

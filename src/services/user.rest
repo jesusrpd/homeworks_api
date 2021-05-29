@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "username": "jesus",
-    "password": "1213",
+    "password": "12",
     "email": "jesusrodrigo881@gmail.com" 
 }
 
@@ -13,6 +13,14 @@ POST http://localhost:4000/api/user/login
 Content-Type: application/json
 
 {
-    "username": "jesus",
-    "password": "1213"
+    "username": "rod",
+    "password": "123"
+}
+
+###
+POST http://localhost:4000/api/user/username
+Content-Type: : application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYWJhMDZiZmRjYWUwMDMxMDM2Y2IyNCIsImlhdCI6MTYyMjE2MDAwNCwiZXhwIjoxNjIyMjQ2NDA0fQ.dDD54TQtStR56D_FaazEeVAj-gGVkMNXkcl31nR1bHE
+{
+    "username": "rodrigo"
 }
