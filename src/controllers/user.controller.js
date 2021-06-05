@@ -39,5 +39,5 @@ export const usernameChange = async (req, res)=>{
 
     const userNew = await User.findOneAndUpdate(req.id, {username});
     userNew.save();
-    res.status(200).json(userNew);
+    res.status(200).json(userNew.username);
 };
